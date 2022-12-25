@@ -1,0 +1,504 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		
+		<title>MaTran</title>
+		<link rel="shortcut icon" href="./images/logo-dudoan.png">
+		<link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="./fonts/css/font-awesome.min.css"> 
+		<link type="text/css" rel="stylesheet" href="./css/mobile-v29.css">
+		<script src="https://kit.fontawesome.com/7e548ca585.js" crossorigin="anonymous"></script>
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/admin-v13.js"></script>
+				<script type="text/javascript">
+			window.addEventListener("keydown",function (e){
+				if (e.ctrlKey && (e.which == 65 || e.which == 66 || e.which == 67 || e.which == 70 || e.which == 80 || e.which == 83 || e.which == 85)) {e.preventDefault();}
+			})
+			
+			window.addEventListener("keydown", function (e){if (e.ctrlKey && (e.which == 16 || e.which == 73 || e.which == 74)) {e.preventDefault();}})
+			document.onkeydown = function (e){if (e.which == 17 || e.which == 18 || e.which == 91 || e.which == 93 || e.which == 123 || e.which == 224){return false;}}
+		</script>
+				
+		<script language="JavaScript">
+			window.onload = function() {
+				
+								document.addEventListener("contextmenu", function(e) {e.preventDefault();}, false);
+								 
+				document.addEventListener("keydown", function(e){
+					// "I" key
+					if (e.ctrlKey && e.shiftKey && e.keyCode == 73){disabledEvent(e);}
+					
+					// "J" key
+					if (e.ctrlKey && e.shiftKey && e.keyCode == 74){disabledEvent(e);}
+					
+					// "S" key + macOS
+					if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)){disabledEvent(e);}
+					
+					// "U" key
+					if (e.ctrlKey && e.keyCode == 85) {disabledEvent(e);}
+					
+					// "F12" key
+					if (event.keyCode == 123) {disabledEvent(e);}
+				}, false);
+				
+				function disabledEvent(e) {
+					if (e.stopPropagation) {
+						e.stopPropagation();
+					}else if (window.event){
+						window.event.cancelBubble = true;
+					}
+					e.preventDefault();
+					return false;
+				}
+			};
+		</script>
+		<script type="text/javascript">
+			function kdown(e){
+				var prtsc = e.keyCode||e.charCode;
+					if (prtsc == 44){window.location.replace('http://google.com');}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="vns-main" ">
+			<div class="head-top">
+				<span class="head-user"><a class="home" href="./index.html"></a></span>
+								<span class="head-time">
+					 </span>
+							</div>
+			
+			<div id="vns-main">
+	<div id="table-cuoc">
+		<div class="taycon" rote="11" check="taycon" next="" valu="<span class='X'>X</span>"><span class="X">Player</span></div>
+		<div class="nhacai" rote="11" check="nhacai" next="" valu="<span class='D'>D</span>"><span class="D">Banker</span></div>
+		<div id="bnt-back"  rote="11">C</div>
+		<button class="bnt-clear" type="button" onclick="location.reload();">Clear</button>
+		
+	</div>
+	
+	<div id="artable">
+		<div class="table-tr">
+			<div class="table-td 11" rote="11"><span></span></div>
+			<div class="table-td 12" rote="12"><span></span></div>
+			<div class="table-td 13" rote="13"><span></span></div>
+			<div class="table-td 14" rote="14"><span></span></div>
+			<div class="table-td 15" rote="15"><span></span></div>
+			<div class="table-td 16" rote="16"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 21" rote="21"><span></span></div>
+			<div class="table-td 22" rote="22"><span></span></div>
+			<div class="table-td 23" rote="23"><span></span></div>
+			<div class="table-td 24" rote="24"><span></span></div>
+			<div class="table-td 25" rote="25"><span></span></div>
+			<div class="table-td 26" rote="26"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 31" rote="31"><span></span></div>
+			<div class="table-td 32" rote="32"><span></span></div>
+			<div class="table-td 33" rote="33"><span></span></div>
+			<div class="table-td 34" rote="34"><span></span></div>
+			<div class="table-td 35" rote="35"><span></span></div>
+			<div class="table-td 36" rote="36"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 41" rote="41"><span></span></div>
+			<div class="table-td 42" rote="42"><span></span></div>
+			<div class="table-td 43" rote="43"><span></span></div>
+			<div class="table-td 44" rote="44"><span></span></div>
+			<div class="table-td 45" rote="45"><span></span></div>
+			<div class="table-td 46" rote="46"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 51" rote="51"><span></span></div>
+			<div class="table-td 52" rote="52"><span></span></div>
+			<div class="table-td 53" rote="53"><span></span></div>
+			<div class="table-td 54" rote="54"><span></span></div>
+			<div class="table-td 55" rote="55"><span></span></div>
+			<div class="table-td 56" rote="56"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 61" rote="61"><span></span></div>
+			<div class="table-td 62" rote="62"><span></span></div>
+			<div class="table-td 63" rote="63"><span></span></div>
+			<div class="table-td 64" rote="64"><span></span></div>
+			<div class="table-td 65" rote="65"><span></span></div>
+			<div class="table-td 66" rote="66"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 71" rote="71"><span></span></div>
+			<div class="table-td 72" rote="72"><span></span></div>
+			<div class="table-td 73" rote="73"><span></span></div>
+			<div class="table-td 74" rote="74"><span></span></div>
+			<div class="table-td 75" rote="75"><span></span></div>
+			<div class="table-td 76" rote="76"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 81" rote="81"><span></span></div>
+			<div class="table-td 82" rote="82"><span></span></div>
+			<div class="table-td 83" rote="83"><span></span></div>
+			<div class="table-td 84" rote="84"><span></span></div>
+			<div class="table-td 85" rote="85"><span></span></div>
+			<div class="table-td 86" rote="86"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 91" rote="91"><span></span></div>
+			<div class="table-td 92" rote="92"><span></span></div>
+			<div class="table-td 93" rote="93"><span></span></div>
+			<div class="table-td 94" rote="94"><span></span></div>
+			<div class="table-td 95" rote="95"><span></span></div>
+			<div class="table-td 96" rote="96"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 101" rote="101"><span></span></div>
+			<div class="table-td 102" rote="102"><span></span></div>
+			<div class="table-td 103" rote="103"><span></span></div>
+			<div class="table-td 104" rote="104"><span></span></div>
+			<div class="table-td 105" rote="105"><span></span></div>
+			<div class="table-td 106" rote="106"><span></span></div>
+		</div>
+	</div>
+	
+	<div id="arketqua">
+		<div class="table-tr">
+			<div class="table-td 21" rote="21"><span></span></div>
+			<div class="table-td 22" rote="22"><span></span></div>
+			<div class="table-td 23" rote="23"><span></span></div>
+			<div class="table-td 24" rote="24"><span></span></div>
+			<div class="table-td 25" rote="25"><span></span></div>
+			<div class="table-td 26" rote="26"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 31" rote="31"><span></span></div>
+			<div class="table-td 32" rote="32"><span></span></div>
+			<div class="table-td 33" rote="33"><span></span></div>
+			<div class="table-td 34" rote="34"><span></span></div>
+			<div class="table-td 35" rote="35"><span></span></div>
+			<div class="table-td 36" rote="36"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 41" rote="41"><span></span></div>
+			<div class="table-td 42" rote="42"><span></span></div>
+			<div class="table-td 43" rote="43"><span></span></div>
+			<div class="table-td 44" rote="44"><span></span></div>
+			<div class="table-td 45" rote="45"><span></span></div>
+			<div class="table-td 46" rote="46"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 51" rote="51"><span></span></div>
+			<div class="table-td 52" rote="52"><span></span></div>
+			<div class="table-td 53" rote="53"><span></span></div>
+			<div class="table-td 54" rote="54"><span></span></div>
+			<div class="table-td 55" rote="55"><span></span></div>
+			<div class="table-td 56" rote="56"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 61" rote="61"><span></span></div>
+			<div class="table-td 62" rote="62"><span></span></div>
+			<div class="table-td 63" rote="63"><span></span></div>
+			<div class="table-td 64" rote="64"><span></span></div>
+			<div class="table-td 65" rote="65"><span></span></div>
+			<div class="table-td 66" rote="66"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 71" rote="71"><span></span></div>
+			<div class="table-td 72" rote="72"><span></span></div>
+			<div class="table-td 73" rote="73"><span></span></div>
+			<div class="table-td 74" rote="74"><span></span></div>
+			<div class="table-td 75" rote="75"><span></span></div>
+			<div class="table-td 76" rote="76"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 81" rote="81"><span></span></div>
+			<div class="table-td 82" rote="82"><span></span></div>
+			<div class="table-td 83" rote="83"><span></span></div>
+			<div class="table-td 84" rote="84"><span></span></div>
+			<div class="table-td 85" rote="85"><span></span></div>
+			<div class="table-td 86" rote="86"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 91" rote="91"><span></span></div>
+			<div class="table-td 92" rote="92"><span></span></div>
+			<div class="table-td 93" rote="93"><span></span></div>
+			<div class="table-td 94" rote="94"><span></span></div>
+			<div class="table-td 95" rote="95"><span></span></div>
+			<div class="table-td 96" rote="96"><span></span></div>
+		</div>
+		<div class="table-tr">
+			<div class="table-td 101" rote="101"><span></span></div>
+			<div class="table-td 102" rote="102"><span></span></div>
+			<div class="table-td 103" rote="103"><span></span></div>
+			<div class="table-td 104" rote="104"><span></span></div>
+			<div class="table-td 105" rote="105"><span></span></div>
+			<div class="table-td 106" rote="106"><span></span></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	var arKetqua = {'XXXXXX':'D',
+					'XXXXXD':'X',
+					'XXXXDX':'D',
+					'XXXDXX':'X',
+					'XXXDDD':'D',
+					'XXXDDX':'X',
+					'XXXDXD':'D',
+					'XXXXDD':'X',
+					'XXDXXX':'D',
+					'XXDXXD':'D',
+					'XXDXDX':'D',
+					'XXDDXX':'X',
+					'XXDDDD':'D',
+					'XXDDDX':'X',
+					'XXDDXD':'D',
+					'XXDXDD':'X',
+					'XDXXDX':'D',
+					'XDXXXX':'X',
+					'XDXXXD':'D',
+					'XDXDXX':'X',
+					'XDXDDD':'D',
+					'XDXDDX':'X',
+					'XDXDXD':'D',
+					'XDXXDD':'X',
+					'DXXDXX':'D',
+					'DXXXXX':'X',
+					'DXXXXD':'D',
+					'DXXXDX':'X',
+					'DXXDDD':'D',
+					'DXXDDX':'X',
+					'DXXDXD':'D',
+					'DXXXDD':'X',
+					'DDDDDD':'X',
+					'DDDXXX':'X',
+					'DDDXXD':'D',
+					'DDDXDX':'X',
+					'DDDDXX':'D',
+					'DDDDDX':'X',
+					'DDDDXD':'D',
+					'DDDXDD':'X',
+					'DDXDDX':'X',
+					'DDXXXX':'X',
+					'DDXXXD':'D',
+					'DDXXDX':'X',
+					'DDXDXX':'D',
+					'DDXDDD':'X',
+					'DDXDXD':'D',
+					'DDXXDD':'D',
+					'DXDDXD':'D',
+					'DXDXXX':'X',
+					'DXDXXD':'D',
+					'DXDXDX':'X',
+					'DXDDXX':'D',
+					'DXDDDD':'X',
+					'DXDDDX':'D',
+					'DXDXDD':'X',
+					'XDDXDD':'D',
+					'XDDXXX':'X',
+					'XDDXXD':'D',
+					'XDDXDX':'X',
+					'XDDDXX':'D',
+					'XDDDDD':'X',
+					'XDDDDX':'D',
+					'XDDDXD':'X'
+					};
+					
+	var arRote   = {'11':'12',   '12':'13',   '13':'14',   '14':'15',   '15':'16',   '16':'21',
+					'21':'22',   '22':'23',   '23':'24',   '24':'25',   '25':'26',   '26':'31',
+					'31':'32',   '32':'33',   '33':'34',   '34':'35',   '35':'36',   '36':'41',
+					'41':'42',   '42':'43',   '43':'44',   '44':'45',   '45':'46',   '46':'51',
+					'51':'52',   '52':'53',   '53':'54',   '54':'55',   '55':'56',   '56':'61',
+					'61':'62',   '62':'63',   '63':'64',   '64':'65',   '65':'66',   '66':'71',
+					'71':'72',   '72':'73',   '73':'74',   '74':'75',   '75':'76',   '76':'81',
+					'81':'82',   '82':'83',   '83':'84',   '84':'85',   '85':'86',   '86':'91',
+					'91':'92',   '92':'93',   '93':'94',   '94':'95',   '95':'96',   '96':'101',
+					'101':'102', '102':'103', '103':'104', '104':'105', '105':'106', '106':'106'
+					};
+	var arBack   = {'106':'105', '105':'104', '104':'103', '103':'102', '102':'101', '101':'96',
+					'96':'95',   '95':'94',   '94':'93',   '93':'92',   '92':'91',   '91':'86',
+					'86':'85',   '85':'84',   '84':'83',   '83':'82',   '82':'81',   '81':'76',
+					'76':'75',   '75':'74',   '74':'73',   '73':'72',   '72':'71',   '71':'66',
+					'66':'65',   '65':'64',   '64':'63',   '63':'62',   '62':'61',   '61':'56',
+					'56':'55',   '55':'54',   '54':'53',   '53':'52',   '52':'51',   '51':'46',
+					'46':'45',   '45':'44',   '44':'43',   '43':'42',   '42':'41',   '41':'36',
+					'36':'35',   '35':'34',   '34':'33',   '33':'32',   '32':'31',   '31':'26',
+					'26':'25',   '25':'24',   '24':'23',   '23':'22',   '22':'21',   '21':'16',
+					'16':'15',   '15':'14',   '14':'13',   '13':'12',   '12':'11',   '11':'11'
+					};
+	
+	$('#table-cuoc .taycon, #table-cuoc .nhacai').click(function(){
+		codRote = $(this).attr('rote');
+		strValu = $(this).attr('valu');
+		strChek = $(this).attr('check');
+		strNext = $(this).attr('next');
+		
+		$('#artable .table-tr .'+ codRote).html(strValu);
+		
+		$('#bnt-back').attr('rote', arRote[codRote]);
+		$('#table-cuoc .taycon').attr('rote', arRote[codRote]);
+		$('#table-cuoc .nhacai').attr('rote', arRote[codRote]);
+		 
+		var str11 = $('#artable .table-tr .11 span').html();
+		var str12 = $('#artable .table-tr .12 span').html();
+		var str13 = $('#artable .table-tr .13 span').html(); 
+		var str14 = $('#artable .table-tr .14 span').html();
+		var str15 = $('#artable .table-tr .15 span').html();
+		var str16 = $('#artable .table-tr .16 span').html();
+		
+		var str21 = $('#artable .table-tr .21 span').html();
+		var str22 = $('#artable .table-tr .22 span').html();
+		var str23 = $('#artable .table-tr .23 span').html();
+		var str24 = $('#artable .table-tr .24 span').html();
+		var str25 = $('#artable .table-tr .25 span').html();
+		var str26 = $('#artable .table-tr .26 span').html();
+		
+		var str31 = $('#artable .table-tr .31 span').html();
+		var str32 = $('#artable .table-tr .32 span').html();
+		var str33 = $('#artable .table-tr .33 span').html();
+		var str34 = $('#artable .table-tr .34 span').html();
+		var str35 = $('#artable .table-tr .35 span').html();
+		var str36 = $('#artable .table-tr .36 span').html();
+		
+		var str41 = $('#artable .table-tr .41 span').html();
+		var str42 = $('#artable .table-tr .42 span').html();
+		var str43 = $('#artable .table-tr .43 span').html();
+		var str44 = $('#artable .table-tr .44 span').html();
+		var str45 = $('#artable .table-tr .45 span').html();
+		var str46 = $('#artable .table-tr .46 span').html();
+		
+		var str51 = $('#artable .table-tr .51 span').html();
+		var str52 = $('#artable .table-tr .52 span').html();
+		var str53 = $('#artable .table-tr .53 span').html();
+		var str54 = $('#artable .table-tr .54 span').html();
+		var str55 = $('#artable .table-tr .55 span').html();
+		var str56 = $('#artable .table-tr .56 span').html();
+		
+		var str61 = $('#artable .table-tr .61 span').html();
+		var str62 = $('#artable .table-tr .62 span').html();
+		var str63 = $('#artable .table-tr .63 span').html();
+		var str64 = $('#artable .table-tr .64 span').html();
+		var str65 = $('#artable .table-tr .65 span').html();
+		var str66 = $('#artable .table-tr .66 span').html();
+		
+		var str71 = $('#artable .table-tr .71 span').html();
+		var str72 = $('#artable .table-tr .72 span').html();
+		var str73 = $('#artable .table-tr .73 span').html();
+		var str74 = $('#artable .table-tr .74 span').html();
+		var str75 = $('#artable .table-tr .75 span').html();
+		var str76 = $('#artable .table-tr .76 span').html();
+		
+		var str81 = $('#artable .table-tr .81 span').html();
+		var str82 = $('#artable .table-tr .82 span').html();
+		var str83 = $('#artable .table-tr .83 span').html();
+		var str84 = $('#artable .table-tr .84 span').html();
+		var str85 = $('#artable .table-tr .85 span').html();
+		var str86 = $('#artable .table-tr .86 span').html();
+		
+		var str91 = $('#artable .table-tr .91 span').html();
+		var str92 = $('#artable .table-tr .92 span').html();
+		var str93 = $('#artable .table-tr .93 span').html();
+		var str94 = $('#artable .table-tr .94 span').html();
+		var str95 = $('#artable .table-tr .95 span').html();
+		var str96 = $('#artable .table-tr .96 span').html();
+		
+		var str101 = $('#artable .table-tr .101 span').html();
+		var str102 = $('#artable .table-tr .102 span').html();
+		var str103 = $('#artable .table-tr .103 span').html();
+		var str104 = $('#artable .table-tr .104 span').html();
+		var str105 = $('#artable .table-tr .105 span').html();
+		var str106 = $('#artable .table-tr .106 span').html();
+		
+		var strRote  = str11+str12+str13+str14+str15+str16;
+			strRote += str21+str22+str23+str24+str25+str26;
+			strRote += str31+str32+str33+str34+str35+str36;
+			strRote += str41+str42+str43+str44+str45+str46;
+			strRote += str51+str52+str53+str54+str55+str56;
+			strRote += str61+str62+str63+str64+str65+str66;
+			strRote += str71+str72+str73+str74+str75+str76;
+			strRote += str81+str82+str83+str84+str85+str86;
+			strRote += str91+str92+str93+str94+str95+str96;
+			strRote += str101+str102+str103+str104+str105+str106;
+		var lenRote = strRote.length;
+		
+		var strLass = (strNext=='nhacai')? 'D':'X';
+		if(lenRote>6){
+			var iNext ='';
+				if(strChek=='nhacai' && strNext=='nhacai'){
+					iNext = '<i class="fas fa-check"></i>';
+					$('#arketqua .table-tr .'+codRote).html('<span class="'+strLass+'">'+iNext+'</span>');
+				}else if(strChek=='nhacai' && strNext=='taycon'){
+					iNext = '<i class="fas fa-times"></i>';
+					$('#arketqua .table-tr .'+codRote).html('<span class="'+strLass+'">'+iNext+'</span>');
+				}else if(strChek=='taycon' && strNext=='taycon'){
+					iNext = '<i class="fas fa-check"></i>';
+					$('#arketqua .table-tr .'+codRote).html('<span class="'+strLass+'">'+iNext+'</span>');
+				}else if(strChek=='taycon' && strNext=='nhacai'){
+					iNext = '<i class="fas fa-times"></i>';
+					$('#arketqua .table-tr .'+codRote).html('<span class="'+strLass+'">'+iNext+'</span>');
+				}
+		}
+		
+		if(lenRote>5){
+			var strCode = strRote[lenRote-6]+strRote[lenRote-5]+strRote[lenRote-4]+strRote[lenRote-3]+strRote[lenRote-2]+strRote[lenRote-1];
+				console.log('strRote:'+strRote+', strCode:'+strCode+', arKetqua:'+arKetqua[strCode]+', arRote:'+arRote[codRote]);
+				if(arKetqua[strCode]=='D'){
+					$('#table-cuoc .taycon').removeClass('set-acvite');
+					$('#table-cuoc .nhacai').removeClass('set-acvite');
+					
+					$('#table-cuoc .nhacai').addClass('set-acvite');
+					$('#table-cuoc .taycon').attr('next','nhacai');
+					$('#table-cuoc .nhacai').attr('next','nhacai');
+					$('#arketqua .table-tr .'+arRote[codRote]).html('<span class="D set-next">D</span>');
+				}else{
+					$('#table-cuoc .taycon').removeClass('set-acvite');
+					$('#table-cuoc .nhacai').removeClass('set-acvite');
+					
+					$('#table-cuoc .taycon').addClass('set-acvite');
+					$('#table-cuoc .taycon').attr('next','taycon');
+					$('#table-cuoc .nhacai').attr('next','taycon');
+					$('#arketqua .table-tr .'+arRote[codRote]).html('<span class="X set-next">X</span>');
+				}
+		}
+		
+	});
+	
+	$('#bnt-back').click(function(){
+		codRote = $(this).attr('rote');
+		
+		$('#bnt-back').attr('rote', arBack[codRote]);
+		$('#table-cuoc .taycon').attr('rote', arBack[codRote]);
+		$('#table-cuoc .nhacai').attr('rote', arBack[codRote]);
+		
+		$('#artable .table-tr .'+codRote).html('<span></span>');
+		$('#arketqua .table-tr .'+codRote).html('<span></span>');
+		
+	});
+})
+</script>		
+		<!-- BAT HE THONG KHI CO THONG BAO --> 
+		<style type="text/css">
+		*:not(input):not(textarea) {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select:none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			user-select:none;
+		}
+		img{
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select:none;
+			-moz-user-select:none;
+			-ms-user-select:none;
+			user-select:none;
+		}
+		</style>
+	</body>
+</html>
